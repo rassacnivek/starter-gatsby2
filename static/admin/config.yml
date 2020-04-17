@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: user/name
+  repo: rassacnivek/starter-gatsby2
 
 media_folder: static/assets
 public_folder: /assets
