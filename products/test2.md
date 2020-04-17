@@ -1,6 +1,6 @@
 ---
-title: test2
-price: "600"
-description: description test 2
-image: /assets/dsc01305.jpg
+title: Clou
+price: "0.80"
+description: Clou de 5.6cm
+image: /assets/clou.png
 ---
