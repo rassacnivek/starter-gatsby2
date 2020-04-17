@@ -1,6 +1,6 @@
 ---
-title: test
-price: "500"
-description: description test
-image: /assets/dsc01304.jpg
+title: Vis
+price: "1.20"
+description: Vis de 8.4cm
+image: /assets/vis.png
 ---
