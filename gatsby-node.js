@@ -1,6 +1,6 @@
 exports.createPages = async ({ actions, graphql }) => {
   const products = await graphql(`
-    query MyQuery {
+    query {
       allMarkdownRemark {
         edges {
           node {
@@ -17,7 +17,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const path = edge.node.frontmatter.path;
     actions.createPages({
       path: path,
-      component: require.resolve('./src/template/productTemplate.js'),
+      component: require.resolve('./src/templates/productTemplate.js'),
       context: {
         path: path
       }
