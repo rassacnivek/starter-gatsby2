@@ -9,7 +9,7 @@ module.exports.handler = function (event, context, callback) {
 
   const data = {
     email_address: formData.email,
-    statut: "subscribed"
+    status: "subscribed"
   }
 
   axios
