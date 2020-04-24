@@ -12,7 +12,7 @@ module.exports.handler = function (event, context, callback) {
   }
 
   axios
-    .post(`https://us8.mailchimp.com/3.0/lists/${memberListId}/members`, data, {
+    .post(`https://us8.api.mailchimp.com/3.0/lists/${memberListId}/members`, data, {
       headers: {
         "Content-Type": "application-json",
         "Authorization": `apikey ${mailChimpApi}`
