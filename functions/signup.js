@@ -2,12 +2,12 @@ const axios = require('axios');
 
 module.exports.handler = function (event, context, callback) {
   const mailChimpApi = 'e17845ab44bea1afb192716d9bf39390-us8';
-  const memberListId = '';
+  const memberListId = 'fa15db727f';
 
   const formData = JSON.parse(event.body);
 
   const data = {
-    email_address: formData.email,
+    email: formData.email,
     statut: "subscribed"
   }
 
@@ -30,7 +30,7 @@ module.exports.handler = function (event, context, callback) {
       callback(null, {
         statusCode: err.status,
         body: JSON.stringify({
-          error: err
+          error: err.response.data
         })
       })
     })
