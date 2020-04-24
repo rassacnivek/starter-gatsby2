@@ -19,7 +19,7 @@ const NewsLetter = () => {
   return (
     <div>
       <form onSubmit={submitForm}>
-        <input type="email" value={inputForm.email} name="" onChange={handleChange} />
+        <input type="email" value={inputForm.email} name="email" onChange={handleChange} />
         <button type="submit">Submit</button>
       </form>
     </div>
