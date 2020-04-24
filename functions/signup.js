@@ -8,7 +8,7 @@ module.exports.handler = function (event, context, callback) {
   const formData = JSON.parse(event.body);
 
   const data = {
-    email: formData.email,
+    email_address: formData.email,
     statut: "subscribed"
   }
 
