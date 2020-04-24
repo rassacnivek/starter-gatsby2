@@ -13,7 +13,7 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
 
-  products.allMarkdownRemark.edges.forEach(edge => {
+  products.data.allMarkdownRemark.edges.forEach(edge => {
     const path = edge.node.frontmatter.path;
     actions.createPages({
       path: path,
