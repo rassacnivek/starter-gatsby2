@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     {
+      resolve: `gatsby-plugin-netlify-identity`,
+      options: {
+        url: `https://your-identity-instance-here.netlify.com/` // required!
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `products`,
