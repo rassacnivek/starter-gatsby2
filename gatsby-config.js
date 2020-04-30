@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify-identity`,
       options: {
-        url: `https://stoic-elion-6c0fc6.netlify.com/`
+        url: `https://stoic-elion-6c0fc6.netlify.app/`
       }
     },
     {
