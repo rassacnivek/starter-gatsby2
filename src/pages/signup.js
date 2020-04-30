@@ -5,10 +5,7 @@ import "react-netlify-identity-widget/styles.css" // delete if you want to bring
 const SignUp = ({ children }) => {
   const identity = useIdentityContext()
   const [dialog, setDialog] = React.useState(false)
-  const name =
-    (identity && identity.user && identity.user.user_metadata && identity.user.user_metadata.name) || "NoName"
-
-  console.log(JSON.stringify(identity))
+  const name = JSON.stringify(identity.user.user_metadata.full_name) || "NoName"
   const isLoggedIn = identity && identity.isLoggedIn
   return (
     <>
