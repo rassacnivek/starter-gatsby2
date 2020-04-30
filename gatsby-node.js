@@ -23,4 +23,29 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     })
   })
+
+  const articles = await graphql(`
+    query {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/products/"}}) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  articles.data.allMarkdownRemark.edges.forEach(edge => {
+    const path = edge.node.frontmatter.path;
+    actions.createPage({
+      path: path,
+      component: require.resolve('./src/templates/articleTemplate.js'),
+      context: {
+        path: path
+      }
+    })
+  })
 }
